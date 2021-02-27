@@ -51,35 +51,7 @@
                 </div>
             </div>
             
-            <div class="row text-center d-flex flex-wrap align-content-center justify-content-center pb-5">
-            <div class="col-lg-5" >
-               <div class="card shadow" >
-                <div class="card-header">
-                    <h4 class="card-title">Vendidos</h4>
-                </div>
-                
-                <div class="card-body">
-                    <div class="chart-pie">
-                        <canvas id="chart-Vendido"  ></canvas>    
-                    </div>
-                </div>
-            </div>
-            </div>
-                
-                <div class="col-lg-5" >
-               <div class="card shadow" >
-                <div class="card-header">
-                    <h4 class="card-title">Alquilados</h4>
-                </div>
-                
-                <div class="card-body">
-                    <div class="chart-pie">
-                        <canvas id="chart-Alquilado"  ></canvas>    
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
+            
         </div>
         
     </body>
@@ -117,74 +89,11 @@
         });
     };
     
-    function chartVendido() {
-        var ctx = document.getElementById("chart-Vendido");
-        var myLineChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Casa", "Departamento", "Oficina", "Local", "Terreno"],
-                datasets: [{
-                    data: [8, 5, 3, 10, 8],
-                    backgroundColor: ["rgba(255, 0, 0, 0.5)", "rgba(100, 255, 0, 0.5)", "rgba(200, 50, 255, 0.5)", "rgba(0, 100, 255, 0.5)", "rgba(255, 102, 0, 0.5)"],
-                    hoverBackgroundColor: ["rgb(255, 0, 0)", "rgb(100, 255, 0)", "rgb(200, 50, 255)", "rgb(0, 100, 255)", "rgb(255, 102, 0)"],
-                    hoverBorderColor: "rgba(234, 236, 244, 1)"
-                }]
-            },
-            options: {
-              maintainAspectRatio: false,
-              tooltips: {
-                borderColor: '#dddfeb',
-                borderWidth: 1,
-                xPadding: 15,
-                yPadding: 15,
-                displayColors: false,
-                caretPadding: 10
-              },
-              legend: {
-                display: true,
-                position: 'right'
-              },
-              cutoutPercentage: 60
-            }
-        });
-    };
     
-    function chartAlquilado() {
-        var ctx = document.getElementById("chart-Alquilado");
-        var myLineChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Casa", "Departamento", "Oficina", "Local", "Terreno"],
-                datasets: [{
-                    data: [1, 2, 7, 4, 5],
-                    backgroundColor: ["rgba(255, 0, 0, 0.5)", "rgba(100, 255, 0, 0.5)", "rgba(200, 50, 255, 0.5)", "rgba(0, 100, 255, 0.5)", "rgba(255, 102, 0, 0.5)"],
-                    hoverBackgroundColor: ["rgb(255, 0, 0)", "rgb(100, 255, 0)", "rgb(200, 50, 255)", "rgb(0, 100, 255)", "rgb(255, 102, 0)"],
-                    hoverBorderColor: "rgba(234, 236, 244, 1)"
-                }]
-            },
-            options: {
-              maintainAspectRatio: false,
-              tooltips: {
-                borderColor: '#dddfeb',
-                borderWidth: 1,
-                xPadding: 15,
-                yPadding: 15,
-                displayColors: false,
-                caretPadding: 10
-              },
-              legend: {
-                display: true,
-                position: 'right'
-              },
-              cutoutPercentage: 60
-            }
-        });
-    };
+    
     
     function start(){
         chartTotal();
-        chartVendido();
-        chartAlquilado();
     }
 </script>
 </html>
